@@ -1,4 +1,10 @@
 <h1>Catalogue</h1>
+
+<form method="get">
+    <input type="text" name="q" value="{{ q }}" placeholder="Titre ou auteur">
+    <button type="submit">Rechercher</button>
+</form>
+
 <ul>
 {% for livre in livres %}
     <li>{{ livre.titre }} ({{ livre.auteur }}) {% if not livre.disponible %}- emprunté{% endif %}</li>
